@@ -4,26 +4,8 @@
     <title>@yield('title', 'La Casa de las Joyas')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .navbar { background-color: #0d2b55; }
-        .navbar-nav .nav-link { color: #fff !important; }
-        .banner {
-            background: url('/images/banner.jpg') no-repeat center center;
-            background-size: cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-        }
-        .banner-box {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 20px 40px;
-            border-radius: 8px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Navbar -->
@@ -105,5 +87,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <div>
+        @include('footer')
+    </div>
 </body>
 </html>
