@@ -1,16 +1,20 @@
 <?php
-namespace App\Http\Controllers\admin;
+
+namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Category;
+use App\Models\Contact;
 
 class DashboardController extends Controller
 {
     public function index()
     {
         return view('admin.dashboard', [
-        'products' => \App\Models\Product::count(),
-        'categories' => \App\Models\Category::count(),
-        'contacts' => \App\Models\Contact::count(),
+            'products'   => Product::count(),
+            'categories' => Category::count(),
+            'contacts'   => Contact::count(),
         ]);
     }
 }

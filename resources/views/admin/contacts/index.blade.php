@@ -5,9 +5,7 @@
   <h1 class="h4 mb-3">Contactos</h1>
   <div class="table-responsive">
     <table class="table table-sm align-middle">
-      <thead>
-        <tr><th>#</th><th>Nombre</th><th>Email</th><th>Mensaje</th><th>Fecha</th></tr>
-      </thead>
+      <thead><tr><th>#</th><th>Nombre</th><th>Email</th><th>Mensaje</th><th>Fecha</th></tr></thead>
       <tbody>
         @foreach($items as $c)
           <tr>

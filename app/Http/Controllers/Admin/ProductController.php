@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;   // <- importa el Controller base
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
@@ -52,20 +52,20 @@ class ProductController extends Controller
             $p->categories()->sync($data['categories']);
         }
 
-        return redirect()->route('admin.productos.index')->with('ok', 'Producto creado');
+        return redirect()->route('admin.productos.index')->with('ok','Producto creado');
     }
 
     public function edit(Product $producto)
     {
         $cats = Category::orderBy('name')->get();
-        return view('admin.products.edit', ['p' => $producto, 'cats' => $cats]);
+        return view('admin.products.edit', ['p'=>$producto,'cats'=>$cats]);
     }
 
     public function update(Request $r, Product $producto)
     {
         $data = $r->validate([
             'name'       => 'required|max:255',
-            'slug'       => 'required|max:255|unique:products,slug,' . $producto->id,
+            'slug'       => 'required|max:255|unique:products,slug,'.$producto->id,
             'description'=> 'nullable',
             'price'      => 'required|numeric|min:0',
             'stock'      => 'nullable|integer|min:0',
@@ -91,12 +91,12 @@ class ProductController extends Controller
             $producto->categories()->sync($data['categories']);
         }
 
-        return redirect()->route('admin.productos.index')->with('ok', 'Producto actualizado');
+        return redirect()->route('admin.productos.index')->with('ok','Producto actualizado');
     }
 
     public function destroy(Product $producto)
     {
         $producto->delete();
-        return back()->with('ok', 'Producto eliminado');
+        return back()->with('ok','Producto eliminado');
     }
 }
