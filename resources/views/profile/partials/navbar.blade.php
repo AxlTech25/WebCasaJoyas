@@ -11,9 +11,11 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link px-3 active" href="./">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="/productos?coleccion=oro">Colecciones</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="productos?coleccion=oro">Colecciones</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categoría</a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            Categoría
+          </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'collares']) }}">Collares</a></li>
             <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'pulseras']) }}">Pulseras</a></li>
@@ -31,15 +33,15 @@
       </ul>
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item me-2">
-@auth
-  @if (Route::has('profile.edit'))
-    <a class="nav-link" href="{{ route('profile.edit') }}"><i class="bi bi-person-circle fs-5"></i></a>
-  @else
-    <a class="nav-link" href="{{ route('login') }}"><i class="bi bi-person-circle fs-5"></i></a>
-  @endif
-@else
-  <a class="nav-link" href="{{ route('login') }}"><i class="bi bi-person fs-5"></i></a>
-@endauth
+          @auth
+            @if (Route::has('profile.edit'))
+              <a class="nav-link" href="{{ route('profile.edit') }}"><i class="bi bi-person-circle fs-5"></i></a>
+            @else
+              <a class="nav-link" href="{{ route('login') }}"><i class="bi bi-person-circle fs-5"></i></a>
+            @endif
+          @else
+            <a class="nav-link" href="{{ route('login') }}"><i class="bi bi-person fs-5"></i></a>
+          @endauth
         </li>
         <li class="nav-item">
           <a class="nav-link position-relative" href="{{ route('carrito.index') }}">

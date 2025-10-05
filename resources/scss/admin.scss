@@ -1,0 +1,10 @@
+// === SCSS del dashboard (Bootstrap 4 + SB Admin 2) ===
+
+// Bootstrap 4 (usa el de node_modules)
+@import "bootstrap/scss/bootstrap";
+
+// SB Admin 2 (usa tus fuentes copiados del zip)
+@import "../admin/sbadmin/scss/sb-admin-2";
+
+// Ajustes mínimos para evitar conflictos con el sitio público:
+.sidebar .nav-item .nav-link { font-weight: 600; }
