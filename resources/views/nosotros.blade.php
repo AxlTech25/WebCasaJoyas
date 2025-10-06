@@ -21,11 +21,11 @@
   {{-- Galería 2 columnas --}}
   <div class="row g-4 mt-4 justify-content-center">
     <div class="col-11 col-md-6 col-lg-5">
-      <img src="/img/nosotros-1.jpg" alt="Taller de joyería"
+      <img src="storage\media\NuestroTaller.jpg" alt="Taller de joyería"
            class="img-fluid rounded shadow-sm w-100">
     </div>
     <div class="col-11 col-md-6 col-lg-5">
-      <img src="/img/nosotros-2.jpg" alt="Equipo de La Casa de las Joyas"
+      <img src="storage\media\PERSONAL-TIENDA.jpg" alt="Equipo de La Casa de las Joyas"
            class="img-fluid rounded shadow-sm w-100">
     </div>
   </div>

@@ -54,7 +54,9 @@
     @foreach($destacados as $p)
       <div class="col-6 col-md-4 col-lg-3">
         <div class="card h-100 border-0 shadow-sm">
-          <img src="{{ $p->images[0] ?? '/img/placeholder.jpg' }}" class="card-img-top" alt="{{ $p->name }}">
+          @foreach($p->image_urls as $url)
+  <img src="{{ $url }}" class="img-thumbnail" style="width:110px;height:110px;object-fit:cover;" alt="">
+@endforeach
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{ $p->name }}</h5>
             <p class="text-muted mb-3">S/ {{ number_format($p->price,2) }}</p>

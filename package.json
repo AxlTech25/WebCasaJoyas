@@ -22,12 +22,14 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^7.1.0",
         "@popperjs/core": "^2.11.8",
-        "bootstrap": "^4.6.2",
+        "bootstrap": "^5.3.8",
         "bootstrap-icons": "^1.13.1",
+        "bootstrap4": "npm:bootstrap@^4.6.2",
         "chart.js": "^4.5.0",
         "datatables.net": "^2.3.4",
         "datatables.net-bs4": "^2.3.4",
         "jquery": "^3.7.1",
-        "jquery.easing": "^1.4.1"
+        "jquery.easing": "^1.4.1",
+        "popper.js": "^1.16.1"
     }
 }

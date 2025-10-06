@@ -25,7 +25,10 @@
       <div class="col">
         <a href="{{ route('productos.show',$p->slug) }}" class="text-decoration-none product-card d-block">
           <div class="product-media rounded">
-            <img src="{{ $p->images[0] ?? '/img/placeholder.jpg' }}" alt="{{ $p->name }}">
+            <img src="{{ $p->image_urls[0] ?? asset('img/placeholder.jpg') }}"
+            alt="{{ $p->name }}"
+            class="card-img-top"
+            style="object-fit:cover;aspect-ratio:1/1;">
           </div>
           <div class="product-info mt-2">
             <h6 class="product-name mb-1">{{ $p->name }}</h6>

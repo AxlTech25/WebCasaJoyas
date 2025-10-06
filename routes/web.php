@@ -32,15 +32,15 @@ Route::post('/contacto', [ContactController::class,'send'])->name('contacto.send
 Route::middleware(['auth','can:admin'])
   ->prefix('admin')->name('admin.')
   ->group(function () {
-    Route::get('./', [DashboardController::class,'index'])->name('dashboard');
-    Route::resource('productos', AdminProductController::class)->except(['show']);
-    Route::resource('categorias', AdminCategoryController::class)->except(['show']);
-    Route::get('contactos', [AdminContactController::class,'index'])->name('contactos.index');
+    Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class,'index'])->name('dashboard');
+    Route::resource('productos', \App\Http\Controllers\Admin\ProductController::class)->except(['show']);
+    Route::resource('categorias', \App\Http\Controllers\Admin\CategoryController::class)->except(['show']);
+    Route::get('contactos', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('contactos.index');
   });
 
 // Dashboard que usa Breeze después del login
 Route::get('/dashboard', fn() =>
-  redirect()->route(\Gate::allows('admin') ? 'admin.dashboard' : 'home')
+  redirect()->route(Gate::allows('admin') ? 'admin.dashboard' : 'home')
 )->middleware('auth')->name('dashboard');
 
 Route::middleware('auth')->group(function () {

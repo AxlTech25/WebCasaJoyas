@@ -12,16 +12,17 @@
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link px-3 active" href="./">Inicio</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="productos?coleccion=oro">Colecciones</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-            Categoría
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'collares']) }}">Collares</a></li>
-            <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'pulseras']) }}">Pulseras</a></li>
-            <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'anillos']) }}">Anillos</a></li>
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categoría
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="catDropdown">
+              <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'collares']) }}">Collares</a></li>
+              <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'pulseras']) }}">Pulseras</a></li>
+              <li><a class="dropdown-item" href="{{ route('productos.index',['categoria'=>'anillos']) }}">Anillos</a></li>
+            </ul>
+          </li>
         <li class="nav-item"><a class="nav-link px-3" href="tiendas">Tiendas</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Más</a>

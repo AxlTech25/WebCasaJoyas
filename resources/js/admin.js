@@ -1,21 +1,16 @@
-// ### Bundle ADMIN (SB Admin 2)
-
-// 1) jQuery y Bootstrap 4
+// --- Librerías del admin (SB Admin 2 usa Bootstrap 4) ---
 import 'jquery';
-import 'bootstrap'; // con bootstrap@4.6.2
-
-// 2) Easing, Chart.js y (opcional) DataTables
 import 'jquery.easing';
-import 'chart.js/auto';
-// import 'datatables.net';
-// import 'datatables.net-bs4';
-
-// 3) Estilos admin (FontAwesome + SCSS de SB Admin 2)
+import 'bootstrap4'; // asegúrate de tener bootstrap@4 instalado
+import 'chart.js/auto'; // Chart.js v4
+// Iconos
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Estilos del admin
 import '../scss/admin.scss';
 
-// 4) Scripts propios SB Admin 2 (si deseas usar los originales)
-import './sb-admin-2'; // adapta si tu archivo se llama .min.js
+// JS propio del template (ajusta nombre si el tuyo es distinto)
+import '../vendor/sbadmin/js/sb-admin-2';
 
 // 5) Ejemplos de charts (puedes moverlos a vistas si quieres)
 window.addEventListener('DOMContentLoaded', () => {

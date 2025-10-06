@@ -2,23 +2,17 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * The policy mappings for the application.
-     * @var array<class-string, class-string>
-     */
-    protected $policies = [
-        // Model::class => Policy::class,
-    ];
+    public function register(): void
+    {
+        //
+    }
 
-    /**
-     * Register any authentication / authorization services.
-     */
     public function boot(): void
     {
-        // si luego defines policies, esta línea las registra
+        //
     }
 }

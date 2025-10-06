@@ -8,7 +8,7 @@ use App\Models\Contact;
 class ContactController extends Controller
 {
     public function index() {
-        $items = Contact::latest()->paginate(20);
-        return view('admin.contacts.index', compact('items'));
+        $items = \App\Models\Contact::latest()->paginate(20);
+        return view('admin.contacts.index', compact('items')); // 👈 OJO a la ruta
     }
 }
