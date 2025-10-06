@@ -1,0 +1,14 @@
+// Bootstrap 4 (el de SB Admin 2)
+@import "bootstrap4/scss/bootstrap"; // usa ~ para resolver desde node_modules
+
+// Variables/estilos del template (si los tienes separados)
+@import "../vendor/sbadmin/scss/variables";
+
+// SCSS principal del template
+@import "../vendor/sbadmin/scss/sb-admin-2";
+
+// Tus overrides (opcionales)
+:root {
+  --admin-accent: #4e73df;
+}
+.sidebar .nav-item .nav-link { font-weight: 600; }

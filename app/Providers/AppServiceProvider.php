@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
@@ -10,11 +11,17 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
+=======
+
+class AppServiceProvider extends ServiceProvider
+{
+>>>>>>> master
     public function register(): void
     {
         //
     }
 
+<<<<<<< HEAD
     /**
      * Bootstrap any application services.
      */
@@ -26,5 +33,10 @@ class AppServiceProvider extends ServiceProvider
 
     Route::middleware('web')
         ->group(base_path('routes/auth.php'));
+=======
+    public function boot(): void
+    {
+        //
+>>>>>>> master
     }
 }

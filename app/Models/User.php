@@ -42,7 +42,12 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+<<<<<<< HEAD
             'password' => 'hashed',
+=======
+            'is_admin'          => 'boolean',
+            'password'          => 'hashed',
+>>>>>>> master
         ];
     }
 }
